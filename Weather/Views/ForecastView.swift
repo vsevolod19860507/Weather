@@ -23,7 +23,7 @@ struct ForecastView: View {
                         
                         HStack {
                             Text(item.dtTxt)
-                            AsyncImage(url: URL(string: "https://openweathermap.org/img/wn/\(item.weather.first!.icon)@2x.png")!)
+                            AsyncImage(url: URL(string: item.weather.first!.iconUrl)!)
                             {
                                 $0
                                     .resizable()
